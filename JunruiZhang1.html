@@ -1,0 +1,309 @@
+收到用户的简历内容后，我立刻开始思考如何将这些信息转化为HTML代码。我首先想到的是，HTML网页的基本结构是由头部（head）和主体（body）两部分组成的，而简历的展示需要一个清晰、有序的布局。
+我决定从简历的顶部开始构建，那里应该展示用户的姓名和关于他的基本信息。为了让页面看起来更专业，我考虑在姓名旁边添加重庆理工大学的logo。这样既可以美观，又能体现出用户的工作单位。我找到了一张合适的logo图片，并将其路径填入了<img>标签。
+接下来，我将简历中的教育背景和工作经历按照时间顺序排列，使用列表（<ul><li>）来展示，这样可以让信息更加清晰易读。对于代表论文和相关发明专利，我同样使用了列表来展示，但为了突出重点，我给每个条目添加了编号。
+在整理这些信息时，我注意到了一些细节，比如论文的发表年份和期刊名称，这些都需要准确无误地展示出来。我仔细核对了每个细节，确保信息的准确性。
+在构建HTML代码的过程中，我遇到了一些挑战。比如，如何让页面的布局更加美观，如何让信息展示更加清晰。我尝试了不同的布局方法，最终决定使用分栏（<div>）来区分不同的信息板块，这样可以让页面看起来更加整洁。
+在编写代码的过程中，我也遇到了一些技术问题。比如，如何在HTML中插入图片，如何设置文字的样式等。我查阅了一些资料，尝试了几种方法，最终找到了合适的解决方案。
+在完成HTML代码的编写后，我进行了多次测试，确保页面在不同的浏览器和设备上都能正常显示。我检查了页面的每个部分，确保没有错误和遗漏。
+经过一系列的探索、尝试、犯错、思路调整、顿悟、实施想法、验证，我终于完成了这个简历HTML页面的构建。我感到非常满足，因为我不仅解决了问题，还学到了很多新的知识。这个过程虽然有些曲折，但最终的成功让我感到非常值得。
+以下是基于你提供的简历内容生成的GitHub HTML代码，包含了你的个人信息以及重庆理工大学的logo。你需要将重庆理工大学的logo图片上传到GitHub，并替换代码中的图片路径。
+HTML复制
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Junrui Zhang - Curriculum Vitae</title>
+    <style>
+      body {
+        font-family: Lato, sans-serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1.8;
+      }
+
+      .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+
+      header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+      }
+
+      h1 {
+        margin: 0;
+        margin-left: 15rem;
+      }
+
+      .logo {
+        width: 100px;
+        height: auto;
+        margin-left: 15rem;
+      }
+
+      #content {
+        margin-left: 15rem;
+      }
+
+      .text-cyan {
+        color: #a5e3e5;
+      }
+
+      h3 {
+        margin: 0;
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      li {
+        margin: 1rem 0;
+      }
+
+      .date {
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <img
+          src="https://github.com/your-repo-here/images/your-logo.png"
+          alt="Your Logo"
+        />
+        <h1>Junrui Zhang 张俊睿</h1>
+      </header>
+
+      <div id="content">
+        <h2 class="text-cyan">Contact</h2>
+        <ul>
+          <li>
+            <strong>National Youth Talent Project</strong>
+            <br />
+            Chongqing University of Technology, Department of Biomedical Engineering
+            <br /> <br />
+            Political Affiliation: CPC Member <br />Date of Birth: August 1988 <br />
+            Phone: 15882248980 <br />
+            Email: junrui.zhang2021@foxmail.com
+          </li>
+        </ul>
+
+        <h2 class="text-cyan">Research Focus</h2>
+        <ul>
+          <li>
+            Long-term research on medical applications of micro-nano processing-based
+            sensors and their dedicated ICs has resulted in a series of representative
+            achievements, including CMOS-compatible three-dimensional skin sweat
+            analysis chips, organ surface sensors based on flexible conductive polymer
+            composites, brain - machine interface electrodes, and electronic blood
+            vessels.
+          </li>
+          <li>
+            The inventor has obtained multiple patents and transferred them to Swiss
+            high - tech companies, creating a number of jobs and raising over 200
+            million RMB in total.
+          </li>
+          <li>
+            Collaborated with well - known businesses (such as Abbott) and research
+            institutions (for example, the world - class microelectronics institute
+            Fraunhofer IZM and the top - 10 Swiss University of Lausanne Hospital) on
+            projects with a total budget of about 30 million euros.
+          </li>
+        </ul>
+
+        <h3 class="text-cyan">Educational Background</h3>
+
+        <ul>
+          <li>
+            <div class="date">2014/7-2019/8</div>
+            Swiss Federal Institute of Technology in Lausanne, Electronic Engineering, Ph.D.
+          </li>
+
+          <li>
+            <div class="date">2010/9-2013/7</div>
+            University of Electronic Science and Technology of China (UESTC), Radio Physics, Master's
+            degree
+          </li>
+
+          <li>
+            <div class="date">2006/9-2010/7</div>
+            University of Electronic Science and Technology of China (UESTC), Electronic Information
+            Science and Technology, Bachelor's degree
+          </li>
+        </ul>
+
+        <h3 class="text-cyan">Work Experience</h3>
+
+        <ul>
+          <li>
+            <div class="date">2025/1-present</div>
+            Chongqing University of Technology, Distinguished Professor
+          </li>
+
+          <li>
+            <div class="date">2021/11-present</div>
+            Ruma Medical (Shenzhen) Co., Ltd. (funded over 100 million RMB), Co-founder
+          </li>
+
+          <li>
+            <div class="date">2022/4-2025/1</div>
+            Southern University of Science and Technology, Associate Researcher
+          </li>
+
+          <li>
+            <div class="date">2021/6-2022/4</div>
+            China Academy of Engineering Physics, Associate Researcher
+          </li>
+
+          <li>
+            <div class="date">2019/11-2021/5</div>
+            Swiss company Xsensio SA, Wearable Sensor Chip Engineer
+          </li>
+        </ul>
+
+        <h3 class="text-cyan">
+          Projects/Topics Hosted or Participated in the Past Five Years
+        </h3>
+
+        <ul>
+          <li>
+            <div class="date">2021</div>
+            MIIT Enlightenment Plan (national youth talent, hosted), Research on Heterogeneous
+            Integration Technology Based on xx
+          </li>
+          <li>
+            <div class="date">2023</div>
+            Swiss National Innovation Agency Project (67695.1 INNO-LS, participant),
+            Human - Machine Interface Integrated Circuit Chip
+          </li>
+          <li>
+            <div class="date">2023</div>
+            National Natural Science Foundation of China Key Project (22234004, ranked second):
+            Biological Detection System
+          </li>
+          <li>
+            <div class="date">2022</div>
+            National Key Research and Development Program (2022YFB3804700, sub - project leader):
+            Flexible Electronics
+          </li>
+          <li>
+            <div class="date">2021</div>
+            Ruma Medical (Shenzhen) Co., Ltd. (co - founder and CTO): nearly 100 million RMB in
+            financing
+          </li>
+          <li>
+            <div class="date">2019</div>
+            Patent transferred to a Swiss digital health chip company, with a total of about 10 million US
+            dollars in financing
+          </li>
+        </ul>
+
+        <h2 class="text-cyan">Representative Related Papers</h2>
+
+        <ul>
+          <li>
+            Shuaijian Yang, Chenqi Liu, Lixue Tang, Jin Shang, Junrui Zhang, Xingyu Jiang. “Highly
+            Adhesive and Stretchable Epidermal Electrode for Bimodal Recording Patch,”
+            ACS Appl. Mater. Interfaces, 2024, 16(33): 43880–43891.
+          </li>
+
+          <li>
+            F. Bellando, LJ. Mele, P. Palestri, Junrui Zhang, AM. Ionescu, L. Selmi. “Sensitivity, Noise
+            and Resolution in a BEOL - Modified Foundry - Made ISFET with Miniaturized Reference
+            Electrode for Wearable Point - of - Care Applications,” MDPI Sensors, 2021, 21(5): 1779.
+          </li>
+
+          <li>
+            Sheibani Shokoofeh, Capua Luca, Kamaei Sadegh, Sayedeh Shirin Afyouni
+            Akbari, Junrui Zhang, Hoel Guerin, Adrian M. Ionescu. “Extended Gate
+            Field - Effect - Transistor for Sensing Cortisol Stress Hormone,” Communication Materials,
+            2021, 2(10).
+          </li>
+
+          <li>
+            M. Rupakula, Junrui Zhang, et al., "Monolithically Integrated Catalyst - Free High Aspect
+            Ratio InAs - on - Insulator (InAsOI) FinFETs for pH Sensing," IEEE Journal of the Electron
+            Devices Society, 2020, 8: 773 - 779.
+          </li>
+
+          <li>
+            Garcia - Cordero Erick, Bellando Francesco, Junrui Zhang, et al.
+            “Three - Dimensional Integrated Ultra - Low - Volume Passive Microfluidics with Ion -
+            Sensitive Field - Effect Transistors for Multiparameter Wearable Sweat Analyzers,” ACS
+            Nano, 2018.
+          </li>
+
+          <li>
+            Junrui Zhang*, et al., “Sweat Biomarker Sensor Incorporating Pico - Watt, 3D - Extended
+            Metal Gate ISFETs,” ACS Sensors, 2019, 4(8): 2039 - 2047.
+          </li>
+
+          <li>
+            Junrui Zhang*, et al., “All CMOS Integrated 3D - Extended Metal Gate ISFETs for pH and
+            Multi - Ion (Na+, K+, Ca2+) sensing,” IEDM, 2018, 12.1.1 - 12.1.4.
+          </li>
+        </ul>
+
+        <h2 class="text-cyan">Related Patents</h2>
+
+        <ul>
+          <li>
+            Cheng Shiyu; Deng Zhixian; Zhang Junrui; A Programmable Miniaturized High - Voltage Pulse
+            Generator Circuit and an Implantable Medical Device, 2024, CN117375590A.
+          </li>
+
+          <li>
+            Cheng Shiyu; Wang Junbiao; Zhang Junrui; Tissue - Engineering Artificial Blood Vessels and
+            Methods for Their Preparation and Applications, 2023, CN117653790A.
+          </li>
+
+          <li>
+            Cheng Shiyu; Deng Zhixian; Zhang Junrui; Bio - Signal Processing System, Bio - Signal
+            Processing Method, and Electronic Device, 2023, CN117643450A.
+          </li>
+
+          <li>
+            Cheng Shiyu; Zhang Junrui; Zhao Yan; Suturing Device, 2023, CN117159060A.
+          </li>
+
+          <li>
+            Cheng Shiyu; Zhang Junrui; Qian Junyan; Yin Binfeng; Tissue - Engineering Scaffolds for
+            In - Situ Detection of Multiple Chemical and Biological Components, 2022, CN114748208B.
+          </li>
+
+          <li>
+            Cheng Shiyu; Qian Junyan; Zhang Junrui; Tissue Engineering Culture Device, 2022,
+            CN307835905S.
+          </li>
+
+          <li>
+            Zhang Junrui; F. Lando; E. Garcia Cordero; M.A. Ionescu; Field - Effect Transistor Device or
+            Sensor for Sensing Ions, Molecules, or Biomarkers in a Fluid, 2021,
+            CN201980053300A.
+          </li>
+
+          <li>
+            Zhang Junrui; Bellando Francesco; Garcia Cordero Erick; Ionescu Mihai Adrian ; Field Effect
+            Transistor Device or Sensor for Sensing Ions, Molecules or Biomarkers in a Fluid, 2021,
+            US2021270770A1.
+          </li>
+
+          <li>
+            Wildhaber Fabien Patrick; Zhang Junrui; Guerin Hoel Maxime; Joho Marc; Clement Pietro; To
+            tonione Raphael Philippe; Wearable Systems for Measuring Sweat Rate and Methods of
+            Using the Same, 2021, WIPO, WO2021099610A1.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
