@@ -17,28 +17,29 @@
             max-width: 1000px;
             margin: 0 auto;
             padding: 2rem;
-            position: relative; /* 为了定位照片 */
         }
 
         header {
             display: flex;
             align-items: center;
+            justify-content: space-between;
             margin-bottom: 1rem;
+            flex-wrap: wrap; /* 确保标题和照片能够在小屏幕下换行 */
         }
 
         h1 {
             margin: 0;
-            margin-left: 15rem;
+            text-align: center;
+            flex: 1;
         }
 
         .logo {
             width: 100px;
             height: auto;
-            margin-left: 15rem;
         }
 
         #content {
-            margin-left: 15rem;
+            margin-top: 1rem;
         }
 
         .text-cyan {
@@ -63,25 +64,64 @@
             color: #666;
         }
 
-        /* 个人照片右上角样式 */
+        /* 使个人照片圆形，并居右显示 */
         .profile-photo {
-            position: absolute;
-            top: 20px;
-            right: 20px;
             width: 120px;
             height: 120px;
             border-radius: 50%;
             object-fit: cover;
-            border: 3px solid #fff;
+        }
+
+        /* 响应式设计：调整小屏幕的布局 */
+        @media screen and (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            h1 {
+                margin-left: 0;
+                text-align: center;
+            }
+
+            .logo {
+                margin-left: 0;
+            }
+
+            #content {
+                margin-left: 0;
+                margin-top: 1rem;
+            }
+
+            .profile-photo {
+                margin-top: 1rem;
+                width: 100px;
+                height: 100px;
+            }
+
+            ul {
+                padding-left: 20px;
+            }
+
+            h2, h3 {
+                font-size: 1.2rem;
+            }
+        }
+
+        /* 在手机上居中显示图片 */
+        @media screen and (max-width: 480px) {
+            .profile-photo {
+                width: 80px;
+                height: 80px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- 个人照片 -->
-        <img src="https://github.com/JRZ-Lab/Profiles/blob/main/%E5%BC%A0%E4%BF%8A%E7%9D%BF.jpg?raw=true" alt="张俊睿的照片" class="profile-photo">
-
         <header>
+            <!-- 个人照片 -->
+            <img src="https://github.com/JRZ-Lab/Profiles/blob/main/%E5%BC%A0%E4%BF%8A%E7%9D%BF.jpg?raw=true" alt="张俊睿的照片" class="profile-photo">
             <h1>张俊睿</h1>
         </header>
 
