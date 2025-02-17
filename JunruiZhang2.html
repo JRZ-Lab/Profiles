@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>张俊睿 - 个人简历</title>
     <style>
         body {
@@ -11,6 +11,7 @@
             margin: 0;
             padding: 0;
             line-height: 1.8;
+            -webkit-text-size-adjust: 100%; /* 防止微信浏览器下字体缩放 */
         }
 
         .container {
@@ -24,7 +25,7 @@
             align-items: center;
             justify-content: space-between;
             margin-bottom: 1rem;
-            flex-wrap: wrap; /* 确保标题和照片能够在小屏幕下换行 */
+            flex-wrap: wrap;
         }
 
         h1 {
@@ -114,6 +115,17 @@
                 width: 80px;
                 height: 80px;
             }
+        }
+
+        /* 微信内嵌浏览器的兼容性处理 */
+        /* 去除微信内嵌浏览器的默认样式 */
+        * {
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
         }
     </style>
 </head>
