@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>张俊睿 - 个人简历</title>
     <style>
         body {
@@ -11,6 +11,7 @@
             margin: 0;
             padding: 0;
             line-height: 1.8;
+            -webkit-text-size-adjust: 100%; /* 防止微信浏览器下字体缩放 */
         }
 
         .container {
@@ -22,22 +23,24 @@
         header {
             display: flex;
             align-items: center;
+            justify-content: space-between;
             margin-bottom: 1rem;
+            flex-wrap: wrap;
         }
 
         h1 {
             margin: 0;
-            margin-left: 15rem;
+            text-align: center;
+            flex: 1;
         }
 
         .logo {
             width: 100px;
             height: auto;
-            margin-left: 15rem;
         }
 
         #content {
-            margin-left: 15rem;
+            margin-top: 1rem;
         }
 
         .text-cyan {
@@ -61,15 +64,76 @@
         .date {
             color: #666;
         }
+
+        /* 使个人照片圆形，并居右显示 */
+        .profile-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        /* 响应式设计：调整小屏幕的布局 */
+        @media screen and (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            h1 {
+                margin-left: 0;
+                text-align: center;
+            }
+
+            .logo {
+                margin-left: 0;
+            }
+
+            #content {
+                margin-left: 0;
+                margin-top: 1rem;
+            }
+
+            .profile-photo {
+                margin-top: 1rem;
+                width: 100px;
+                height: 100px;
+            }
+
+            ul {
+                padding-left: 20px;
+            }
+
+            h2, h3 {
+                font-size: 1.2rem;
+            }
+        }
+
+        /* 在手机上居中显示图片 */
+        @media screen and (max-width: 480px) {
+            .profile-photo {
+                width: 80px;
+                height: 80px;
+            }
+        }
+
+        /* 微信内嵌浏览器的兼容性处理 */
+        /* 去除微信内嵌浏览器的默认样式 */
+        * {
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-<!--             <img
-                src="https://github.com/JRZ-Lab/Profiles/blob/main/CQUT-Logo.png?raw=true"
-                alt="重庆理工大学 Logo"
-            /> -->
+            <!-- 个人照片 -->
+            <img src="https://github.com/JRZ-Lab/Profiles/blob/main/%E5%BC%A0%E4%BF%8A%E7%9D%BF.jpg?raw=true" alt="张俊睿的照片" class="profile-photo">
             <h1>张俊睿</h1>
         </header>
 
@@ -87,7 +151,7 @@
             <h2 class="text-cyan">研究方向</h2>
             <ul>
                 <li>长期从事基于微纳加工的传感器及其专用集成电路的医疗应用研究，并在该领域取得一系列代表性研究成果，主要包括 CMOS 兼容的三维皮肤汗液分析芯片，基于柔性导电高分子复合体的器官表面传感器、脑机接口电极以及电子血管等。</li>
-                <li>获得了多个发明专利并转化到瑞士高科技公司，创造多个就业岗位，累计融资超过 2 亿元人民币。</li>
+                <li>获得了多个发明专利并转化到瑞士高科技公司，创造多个就业岗位，累计融资超过 2 亿元人民币。</li>    
                 <li>曾与多家知名企业（如雅培）和研究机构（如世界首屈一指的微电子研究所 Fraunhofer IZM、全球排名前 10 的瑞士洛桑大学医院）等展开合作，参与项目总经费约 3000 万欧元。</li>
             </ul>
 
